@@ -68,7 +68,7 @@ const Home = () => {
           <div className='flex flex-col gap-4 mt-16'>
                 { data.leftMember.slice(0,3).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -81,7 +81,7 @@ const Home = () => {
             <div className='flex flex-col gap-4'>
                 { data.leftMember.slice(3,6).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -94,7 +94,7 @@ const Home = () => {
             <div className='flex flex-col gap-4 mt-20'>
                 { data.leftMember.slice(6,8).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -107,7 +107,7 @@ const Home = () => {
             <div className='flex flex-col gap-4'>
                 { data.leftMember.slice(8,10).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -120,7 +120,7 @@ const Home = () => {
             <div className='flex flex-col gap-4 mt-8'>
                 { data.leftMember.slice(10,12).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -133,7 +133,7 @@ const Home = () => {
             <div className='flex flex-col gap-4'>
                 { data.leftMember.slice(12,14).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -146,7 +146,7 @@ const Home = () => {
             <div className='flex flex-col gap-4 mt-20'>
                 { data.leftMember.slice(14,16).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -159,7 +159,7 @@ const Home = () => {
             <div className='flex flex-col gap-4'>
                 { data.leftMember.slice(16,19).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
@@ -172,7 +172,7 @@ const Home = () => {
             <div className='flex flex-col gap-4 mt-16'>
                 { data.leftMember.slice(19,22).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className='bg-stone-100 dark:bg-stone-900 w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3'>
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
                         <img
                           src={leftMemberitem.img}
                           className='h-[160px] w-full object-cover'
