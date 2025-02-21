@@ -1,0 +1,127 @@
+{
+    "leftMember": [
+        {   
+            "id" : "00",
+            "name" : "Aditya Tanjung",
+            "position" : "Director",
+            "img" : "/members/aditytanjung.webp"
+        },{   
+            "id" : "01",
+            "name" : "Zulmy Adi Rizky",
+            "position" : "VP Operations",
+            "img" : "/members/zulmiadirizky.webp"
+        },{
+            "id" : "02",
+            "name" : "Rohmat Hanif Basuki",
+            "position" : "AVP Mobile App",
+            "img" : "/members/rohmathanifbasuki.webp"
+        },{   
+            "id" : "03",
+            "name" : "Joko Susilo",
+            "position" : "AVP Web Development",
+            "img" : "/members/jokosusilo.webp"
+        },{   
+            "id" : "04",
+            "name" : "Dinivan Nendra",
+            "position" : "Sr. UI/UX Designer",
+            "img" : "/members/dinivannendra.webp"
+        },{   
+            "id" : "05",
+            "name" : "Wisnu Praditya",
+            "position" : "Senior Support & QC",
+            "img" : "/members/wisnupraditya.webp"
+        },{   
+            "id" : "06",
+            "name" : "Veldi Mahartriasa",
+            "position" : "Senior SDM, Finance & Administration",
+            "img" : "/members/veldimahartriasa.webp"
+        },{   
+            "id" : "07",
+            "name" : "Nurul Aida Fitriani",
+            "position" : "Staff SDM, Finance & Administration",
+            "img" : "/members/nurulaidafitriani.webp"
+        },{   
+            "id" : "08",
+            "name" : "Silvia Shera Auliya",
+            "position" : "Staff SDM, Finance & Administration",
+            "img" : "/members/silviasheraauliya.webp"
+        },{   
+            "id" : "09",
+            "name" : "Thesa Aprilia",
+            "position" : "Staff Support & QC",
+            "img" : "/members/thesaaprilia.webp"
+        },{   
+            "id" : "10",
+            "name" : "Muhammad Drajat R",
+            "position" : "Staff UI/UX Designer",
+            "img" : "/members/muhammaddrajat.webp"
+        },{   
+            "id" : "11",
+            "name" : "Ikke Amalia Risky",
+            "position" : "Senior Mobile App",
+            "img" : "/members/ikkeamaliarisky.webp"
+        },{   
+            "id" : "12",
+            "name" : "Fahmi Abdul Aziz",
+            "position" : "Staff Mobile App",
+            "img" : "/members/fahmiabdulaziz.webp"
+        },{   
+            "id" : "13",
+            "name" : "M. Bakhrul Bila S.",
+            "position" : "Senior Front-End",
+            "img" : "/members/mbakhrulbilas.webp"
+        },{   
+            "id" : "14",
+            "name" : "Triyono Rifan",
+            "position" : "Staff Fullstack",
+            "img" : "/members/triyonorifan.webp"
+        },{   
+            "id" : "15",
+            "name" : "Aria Maulana",
+            "position" : "Staff Fullstack",
+            "img" : "/members/ariamaulana.webp"
+        },{   
+            "id" : "16",
+            "name" : "Fenti Agil Sakinah",
+            "position" : "Staff Fullstack",
+            "img" : "/members/fentiagilsakinah.webp"
+        },{   
+            "id" : "17",
+            "name" : "Algiant setiaji R",
+            "position" : "Staff Fullstack",
+            "img" : "/members/algiantsetiajir.webp"
+        },{   
+            "id" : "18",
+            "name" : "Alexander Evan",
+            "position" : "Staff Back-End",
+            "img" : "/members/alexanderevan.webp"
+        },{   
+            "id" : "19",
+            "name" : "Mohammad Lazuardy",
+            "position" : "Staff Back-End",
+            "img" : "/members/mohammadlazuardy.webp"
+        },{   
+            "id" : "20",
+            "name" : "Rico Wahyu Yudana",
+            "position" : "Staff Back-End",
+            "img" : "/members/ricowahyuyudana.webp"
+        },{   
+            "id" : "21",
+            "name" : "Fatchur Rosi",
+            "position" : "Staff Fullstack",
+            "img" : "/members/fatchurrosi.webp"
+        }
+    ],"rightMember": [
+        {
+            "id" : "02",
+            "name" : "Rohmat Hanif Basuki",
+            "position" : "AVP Mobile App",
+            "img" : "/members/rohmathanifbasuki.webp"
+        },{   
+            "id" : "03",
+            "name" : "Joko Susilo",
+            "position" : "AVP Web Development",
+            "img" : "/members/jokosusilo.webp"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+[03-Jan-2025 09:34:33 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeekna'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:34:37 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeekna'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:34:54 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeekna'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:35:53 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:35:55 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:44:20 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:44:26 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:44:29 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:44:29 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:44:29 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:44:29 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ucareersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:45:07 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:45:08 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:45:09 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:45:09 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:45:11 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:45:20 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:46:34 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:46:43 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/config.php on line 7
+[03-Jan-2025 09:47:12 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/home.php on line 19
+[03-Jan-2025 09:47:20 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/home.php on line 19
+[03-Jan-2025 09:47:36 Asia/Jakarta] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'careersenergeek'@'localhost' (using password: YES) in /home/eneg1777/public_html/careersenergeek/api/home.php on line 19
+[04-Jan-2025 10:08:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 22
+[07-Jan-2025 10:48:52 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '=' in /home/eneg1777/public_html/careersenergeek/api/apply.php on line 34
+[07-Jan-2025 10:48:54 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '=' in /home/eneg1777/public_html/careersenergeek/api/apply.php on line 34
+[07-Jan-2025 10:49:08 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '=' in /home/eneg1777/public_html/careersenergeek/api/apply.php on line 34
+[07-Jan-2025 23:01:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 22
+[07-Jan-2025 23:01:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 22
+[07-Jan-2025 23:06:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 24
+[07-Jan-2025 23:07:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 24
+[07-Jan-2025 23:07:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 24
+[07-Jan-2025 23:08:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 24
+[07-Jan-2025 23:08:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 17
+[07-Jan-2025 23:09:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 24
+[07-Jan-2025 23:10:23 Asia/Jakarta] User ID: 9
+[07-Jan-2025 23:10:23 Asia/Jakarta] Password hash: $2y$10$OslWOInZ.mNSJFkyhRJrO.IhNCyWyOsTf4qgoOTYrDOoX5TjXOid.
+[07-Jan-2025 23:10:32 Asia/Jakarta] User ID: 9
+[07-Jan-2025 23:10:32 Asia/Jakarta] Password hash: $2y$10$9EjEis6ES8J5yBDv1TemOeMCYTJ1NPn3zq9OupzFeYKlNJgx2s..2
+[07-Jan-2025 23:14:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 32
+[07-Jan-2025 23:18:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 16
+[07-Jan-2025 23:18:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 23
+[07-Jan-2025 23:19:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 23
+[07-Jan-2025 23:20:10 Asia/Jakarta] Invalid request method: OPTIONS
+[07-Jan-2025 23:20:10 Asia/Jakarta] Error preparing SQL statement: Unknown column 'password' in 'SET'
+[07-Jan-2025 23:20:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 27
+[07-Jan-2025 23:20:52 Asia/Jakarta] Invalid request method: OPTIONS
+[07-Jan-2025 23:20:52 Asia/Jakarta] Error preparing SQL statement: Unknown column 'password' in 'SET'
+[07-Jan-2025 23:20:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/eneg1777/public_html/careersenergeek/api/reset-password.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/eneg1777/public_html/careersenergeek/api/reset-password.php on line 27

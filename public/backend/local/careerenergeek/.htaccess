@@ -1,0 +1,1 @@
+RewriteRule ^loker.php$ /loker.php%20 [L]
