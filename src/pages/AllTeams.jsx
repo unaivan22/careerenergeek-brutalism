@@ -265,7 +265,7 @@ export default function AllTeams() {
   }, []);
 
   return (
-    <div id="home" className="bg-purple-300">
+    <div id="home" className="bg-lime-300">
       <NavbarPublic />
       <ScrollToTop />
       <div className="container pt-32">

@@ -20,6 +20,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { InfiniteSlider } from '@/components/ui/infinite-slider';
+const images = import.meta.glob('/public/clients/*.webp', { eager: true });
 
 const Home = () => {
   const [lokers, setLokers] = useState([]);
@@ -56,12 +58,12 @@ const Home = () => {
   };
 
   return (
-    <div id='home'>
+    <div id='home' className='bg-yellow-300 pb-12 md:pb-0'>
       <NavbarPublic />
       {/* {lokers.length === 0 ? (
         <img className='hidden md:block mt-24' src='/bgteam.webp' />
         ) : ( */}
-        <div className='flex flex-col gap-4 bg-yellow-400'>
+        <div className='flex flex-col gap-4 bg-orange-400'>
           <div className='hidden md:grid grid-cols-9 gap-3 mt-[120px] px-4'>
           <div className='flex flex-col gap-4 mt-16'>
                 { data.leftMember.slice(0,3).map((leftMemberitem, i) => {
@@ -189,7 +191,7 @@ const Home = () => {
       </div>
         
       <img className='md:hidden mt-0 md:mt-24' src='/bgteam.webp' />
-      <div className='container mb-32 -translate-y-[20px] lg:-translate-y-[200px] bg-green-500 mt-32 pt-12 pb-24 px-12 rounded-xl'>
+      <div className='container mb-32 -translate-y-[100px] lg:-translate-y-[180px] bg-green-500 mt-32 pt-12 pb-24 px-6 lg:px-12 rounded-xl'>
         <div className='flex flex-col mt-12 md:mt-24 md:mb-32 mb-16'>
           {/* <img src='/bgteam.webp' /> */}
           <div></div>
@@ -250,13 +252,63 @@ const Home = () => {
           </defs>
         </svg>
       </div>
+
+      <div className='-translate-y-[100px] md:-translate-y-[150px]'>
+        <InfiniteSlider gap={24}>
+          {Object.keys(images).map((key, index) => {
+              const fileName = key.split('/').pop().replace('.webp', '');
+              return (
+                <div key={key} className="flex flex-col gap-1">
+                  <img
+                    src={images[key]?.default || images[key]}
+                    alt={fileName}
+                    className="h-[80px] mr-4"
+                    onClick={() => openLightbox(index)}
+                  />
+                  {/* <p className="font-light text-sm text-stone-400 mt-2 capitalize">{fileName}</p> */}
+                </div>
+              );
+            })}
+          {/* <img
+            src='https://motion-primitives.com/apple_music_logo.svg'
+            alt='Apple Music logo'
+            className='h-[120px] w-auto'
+          />
+          <img
+            src='https://motion-primitives.com/chrome_logo.svg'
+            alt='Chrome logo'
+            className='h-[120px] w-auto'
+          />
+          <img
+            src='https://motion-primitives.com/strava_logo.svg'
+            alt='Strava logo'
+            className='h-[120px] w-auto'
+          />
+          <img
+            src='https://motion-primitives.com/nintendo_logo.svg'
+            alt='Nintendo logo'
+            className='h-[120px] w-auto'
+          />
+          <img
+            src='https://motion-primitives.com/jquery_logo.svg'
+            alt='Jquery logo'
+            className='h-[120px] w-auto'
+          />
+          <img
+            src='https://motion-primitives.com/prada_logo.svg'
+            alt='Prada logo'
+            className='h-[120px] w-auto'
+          /> */}
+        </InfiniteSlider>
+      </div>
+
       <div className='container'>
         <div className='md:mx-[12vw] mb-12'>
           <div className='flex flex-col items-center justify-center bg-black dark:bg-stone-900 py-12 md:py-24 w-full gap-4 rounded-2xl'>
             <h1 className='text-white text-center text-xl md:text-4xl'>We Can't Wait To Join Out Teams</h1>
             <p className='text-white text-xs md:text-xl font-light text-center'>Let's connect with you and hear your story. <br /> Let's work together to achieve amazing things!</p>
             <a href='https://energeek.co.id/#bt_contact' target='blank'>
-              <Button>Contact Us</Button>
+              <Button className='rounded-xl'>Contact Us</Button>
             </a>
           </div>
         </div>
