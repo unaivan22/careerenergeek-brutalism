@@ -190,7 +190,40 @@ const Home = () => {
           </div>
       </div>
         
-      <img className='md:hidden mt-0 md:mt-24' src='/bgteam.webp' />
+      {/* <img className='md:hidden mt-0 md:mt-24' src='/bgteam.webp' /> */}
+      <div className='md:hidden mt-8 md:mt-24 space-y-6'>
+        <InfiniteSlider gap={24}>
+            { data.leftMember.slice(1,11).map((leftMemberitem, i) => {
+              return (
+                <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
+                    <img
+                      src={leftMemberitem.img}
+                      className='h-[160px] w-full object-cover'
+                    />
+                </Card>
+              );
+            })
+        }
+        </InfiniteSlider>
+        <InfiniteSlider gap={24} reverse>
+            { data.leftMember.slice(12,21).map((leftMemberitem, i) => {
+              return (
+                <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
+                    <img
+                      src={leftMemberitem.img}
+                      className='h-[160px] w-full object-cover'
+                    />
+                </Card>
+              );
+            })
+        }
+        </InfiniteSlider>
+        <div className='flex items-center justify-center'>
+        <a href='/#/teams'>
+          <Button variant='secondary' className='rounded-xl'>All Teams</Button>
+        </a>
+        </div>
+      </div>
       <div className='container mb-32 -translate-y-[100px] lg:-translate-y-[180px] bg-green-500 mt-32 pt-12 pb-24 px-6 lg:px-12 rounded-xl'>
         <div className='flex flex-col mt-12 md:mt-24 md:mb-32 mb-16'>
           {/* <img src='/bgteam.webp' /> */}
@@ -262,43 +295,13 @@ const Home = () => {
                   <img
                     src={images[key]?.default || images[key]}
                     alt={fileName}
-                    className="h-[80px] mr-4"
+                    className="h-[50px] md:h-[80px] mr-4"
                     onClick={() => openLightbox(index)}
                   />
                   {/* <p className="font-light text-sm text-stone-400 mt-2 capitalize">{fileName}</p> */}
                 </div>
               );
             })}
-          {/* <img
-            src='https://motion-primitives.com/apple_music_logo.svg'
-            alt='Apple Music logo'
-            className='h-[120px] w-auto'
-          />
-          <img
-            src='https://motion-primitives.com/chrome_logo.svg'
-            alt='Chrome logo'
-            className='h-[120px] w-auto'
-          />
-          <img
-            src='https://motion-primitives.com/strava_logo.svg'
-            alt='Strava logo'
-            className='h-[120px] w-auto'
-          />
-          <img
-            src='https://motion-primitives.com/nintendo_logo.svg'
-            alt='Nintendo logo'
-            className='h-[120px] w-auto'
-          />
-          <img
-            src='https://motion-primitives.com/jquery_logo.svg'
-            alt='Jquery logo'
-            className='h-[120px] w-auto'
-          />
-          <img
-            src='https://motion-primitives.com/prada_logo.svg'
-            alt='Prada logo'
-            className='h-[120px] w-auto'
-          /> */}
         </InfiniteSlider>
       </div>
 

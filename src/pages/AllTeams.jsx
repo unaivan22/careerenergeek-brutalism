@@ -7,6 +7,9 @@ import { BsCursorFill } from "react-icons/bs";
 import { ArrowUpRight } from "lucide-react";
 import ScrollToTop from "./ScrollToTop";
 import { ModeToggle } from "@/components/mode-toggle";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import data from './data.json'
+import { Card } from "@/components/ui/card";
 
 const getRandomValue = (range) => Math.random() * range;
 
@@ -268,12 +271,23 @@ export default function AllTeams() {
     <div id="home" className="bg-lime-300">
       <NavbarPublic />
       <ScrollToTop />
-      <div className="container pt-32">
-        <div className="h-[70vh] w-full">
+      <div className="pt-24 md:hidden">
+            <InfiniteSlider gap={24}>
+                { data.leftMember.slice(1,11).map((leftMemberitem, i) => {
+                  return (
+                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
+                        <img
+                          src={leftMemberitem.img}
+                          className='h-[160px] w-full object-cover'
+                        />
+                    </Card>
+                  );
+                })
+            }
+            </InfiniteSlider>
 
-
-            <div class="grid h-full w-full place-items-center">
-                <div className="flex flex-col gap-1 text-center items-center justify-center px-[6vw] md:px-[20vw] xl:px-[12vw] translate-y-[2vh]">
+            <div class="grid h-fit w-full place-items-center py-12">
+                <div className="mb-12 flex flex-col gap-1 text-center items-center justify-center px-[6vw] md:px-[20vw] xl:px-[12vw] translate-y-[2vh]">
                     <h1 className="font-semibold text-3xl">Be Part of Our Journey!</h1>
                     <p className="text-sm opacity-60 md:px-24 mb-4">We’re a dynamic team from diverse disciplines, redefining the web’s future. Sound like your kind of adventure? Take a look at our current openings!</p>
                     <a href="/">
@@ -281,6 +295,33 @@ export default function AllTeams() {
                     </a>
                 </div>
             </div>
+
+            <InfiniteSlider gap={24} reverse>
+              { data.leftMember.slice(12,21).map((leftMemberitem, i) => {
+                return (
+                  <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
+                      <img
+                        src={leftMemberitem.img}
+                        className='h-[160px] w-full object-cover'
+                      />
+                  </Card>
+                );
+              })
+            }
+            </InfiniteSlider>
+          </div>
+      <div className="container pt-32">
+        <div className="h-fit md:h-[70vh] w-full">
+
+          <div class="hidden md:grid h-full w-full place-items-center">
+              <div className="flex flex-col gap-1 text-center items-center justify-center px-[6vw] md:px-[20vw] xl:px-[12vw] translate-y-[2vh]">
+                  <h1 className="font-semibold text-3xl">Be Part of Our Journey!</h1>
+                  <p className="text-sm opacity-60 md:px-24 mb-4">We’re a dynamic team from diverse disciplines, redefining the web’s future. Sound like your kind of adventure? Take a look at our current openings!</p>
+                  <a href="/">
+                      <Button className='w-fit rounded-xl'>Career <ArrowUpRight className="ml-1 h-4 w-4" /> </Button>
+                  </a>
+              </div>
+          </div>
 
           <motion.div
             className="absolute top-[42vh] left-[26vw]"
