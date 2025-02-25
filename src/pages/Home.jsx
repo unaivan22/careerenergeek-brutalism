@@ -12,6 +12,9 @@ import { ModeToggle } from '@/components/mode-toggle';
 import { Tilt } from '@/components/ui/tilt';
 import { Spotlight } from '@/components/ui/spotlight';
 import { GlowEffect } from '@/components/ui/glow-effect';
+import { motion } from "framer-motion";
+import { BsCursorFill } from "react-icons/bs";
+import { ArrowUpRight } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -31,10 +34,52 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+const getRandomValue = (range) => Math.random() * range;
+
+const getRandomTranslation = () => ({
+  x: getRandomValue(100) - getRandomValue(120),
+  y: getRandomValue(100) - getRandomValue(120),
+  z: getRandomValue(100) - getRandomValue(120),
+});
 
 const Home = () => {
   const [lokers, setLokers] = useState([]);
   const navigate = useNavigate();
+  const [innovationTranslation, setInnovationTranslation] = useState(
+    getRandomTranslation()
+  );
+
+  const [teamworkTranslation, setTeamworkTranslation] = useState(
+    getRandomTranslation()
+  );
+
+  const [professionalTranslation, setProfessionalTranslation] = useState(
+    getRandomTranslation()
+  );
+
+  useEffect(() => {
+      const innovationInterval = setInterval(() => {
+        setInnovationTranslation(getRandomTranslation());
+      }, 2500);
+  
+      return () => clearInterval(innovationInterval);
+    }, []);
+  
+  useEffect(() => {
+    const teamworkInterval = setInterval(() => {
+      setTeamworkTranslation(getRandomTranslation());
+    }, 2000);
+
+    return () => clearInterval(teamworkInterval);
+  }, []);
+
+  useEffect(() => {
+    const professionalInterval = setInterval(() => {
+      setProfessionalTranslation(getRandomTranslation());
+    }, 2200);
+
+    return () => clearInterval(professionalInterval);
+  }, []);
 
   useEffect(() => {
     // Fetch loker list from the backend
@@ -68,6 +113,66 @@ const Home = () => {
 
   return (
     <div id='home' className='bg-yellow-300 pb-12 md:pb-0'>
+      <motion.div
+        className="absolute lg:top-[52vh] top-[32vh] lg:left-[24vw] left-[16vw] z-[9]"
+        animate={{
+          x: innovationTranslation.x,
+          y: innovationTranslation.y,
+          z: innovationTranslation.z,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+        }}
+      >
+        <div className="flex gap-x-1">
+          <div className="mt-4 -mr-2 py-1 px-3 bg-lime-600 rounded-full flex items-center gap-x-2 w-fit">
+            <p className="text-white text-[1rem] capitalize capitalize">innovation</p>
+          </div>
+          <BsCursorFill className="h-4 w-4 text-lime-600" />
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute lg:top-[52vh] top-[42vh] lg:right-[26vw] right-[16vw] z-[9]"
+        animate={{
+          x: teamworkTranslation.x,
+          y: teamworkTranslation.y,
+          z: teamworkTranslation.z,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+        }}
+      >
+        <div className="flex gap-x-1">
+          <BsCursorFill className="scale-x-[-1] h-4 w-4 text-sky-600" />
+          <div className="mt-4 -ml-2 py-1 px-3 bg-sky-600 rounded-full flex items-center gap-x-2 w-fit">
+            <p className="text-white text-[1rem] capitalize">teamwork</p>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute lg:top-[72vh] top-[56vh] lg:left-[46vw] left-[32vw] z-[9]"
+        animate={{
+          x: professionalTranslation.x,
+          y: professionalTranslation.y,
+          z: professionalTranslation.z,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+        }}
+      >
+        <div className="flex gap-x-1">
+          <div className="mt-4 -mr-2 py-1 px-3 bg-purple-600 rounded-full flex items-center gap-x-2 w-fit">
+            <p className="text-white text-[1rem] capitalize capitalize">professional</p>
+          </div>
+          <BsCursorFill className="h-4 w-4 text-purple-600" />
+        </div>
+      </motion.div>
+      
       <NavbarPublic />
       {/* {lokers.length === 0 ? (
         <img className='hidden md:block mt-24' src='/bgteam.webp' />
