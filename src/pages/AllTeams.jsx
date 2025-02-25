@@ -9,7 +9,23 @@ import ScrollToTop from "./ScrollToTop";
 import { ModeToggle } from "@/components/mode-toggle";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import data from './data.json'
-import { Card } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 const getRandomValue = (range) => Math.random() * range;
 
@@ -268,22 +284,40 @@ export default function AllTeams() {
   }, []);
 
   return (
-    <div id="home" className="bg-lime-300">
+    <div id="home" className="bg-lime-300 md:pb-0 pb-8">
       <NavbarPublic />
       <ScrollToTop />
-      <div className="pt-24 md:hidden">
+      <div className="pt-24 lg:hidden">
             <InfiniteSlider gap={24}>
-                { data.leftMember.slice(1,11).map((leftMemberitem, i) => {
+            { data.leftMember.slice(0,11).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-[160px] w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </InfiniteSlider>
 
             <div class="grid h-fit w-full place-items-center py-12">
@@ -297,23 +331,41 @@ export default function AllTeams() {
             </div>
 
             <InfiniteSlider gap={24} reverse>
-              { data.leftMember.slice(12,21).map((leftMemberitem, i) => {
-                return (
-                  <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
-                      <img
-                        src={leftMemberitem.img}
-                        className='h-[160px] w-full object-cover'
-                      />
-                  </Card>
-                );
-              })
-            }
+              { data.leftMember.slice(12,22).map((leftMemberitem, i) => {
+                  return (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-[160px] w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  );
+                })
+              }
             </InfiniteSlider>
           </div>
       <div className="container pt-32">
         <div className="h-fit md:h-[70vh] w-full">
 
-          <div class="hidden md:grid h-full w-full place-items-center">
+          <div class="hidden lg:grid h-full w-full place-items-center">
               <div className="flex flex-col gap-1 text-center items-center justify-center px-[6vw] md:px-[20vw] xl:px-[12vw] translate-y-[2vh]">
                   <h1 className="font-semibold text-3xl">Be Part of Our Journey!</h1>
                   <p className="text-sm opacity-60 md:px-24 mb-4">We’re a dynamic team from diverse disciplines, redefining the web’s future. Sound like your kind of adventure? Take a look at our current openings!</p>
@@ -764,21 +816,22 @@ export default function AllTeams() {
           </motion.div>
 
         </div>
-
-        <div className="md:mx-[12vw] mt-24 mb-12">
-          <div className="flex flex-col items-center justify-center bg-black dark:bg-stone-900 py-12 md:py-24 w-full gap-4 rounded-2xl">
-            <h1 className="text-white text-center text-xl md:text-4xl">
-              We Can't Wait To Join Out Teams
-            </h1>
-            <p className="text-white text-xs md:text-xl font-light text-center">
-              Let's connect with you and hear your story. <br /> Let's work
-              together to achieve amazing things!
-            </p>
-            <a href="https://energeek.co.id/#bt_contact" target="blank">
-              <Button>Contact Us</Button>
-            </a>
-          </div>
-        </div>
+      </div>
+      <div className='container lg:pt-32'>
+        <Card className="md:mx-[12vw] bg-[#A56DFE] p-4 lg:p-12">
+          <CardHeader>
+            <CardTitle className='text-center text-4xl'>We Can't Wait To Join Out Teams</CardTitle>
+            <CardDescription className='text-black text-center'>Let's connect with you and hear your story.
+            Let's work together to achieve amazing things!</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className='flex items-center justify-center'>
+              <a href='https://energeek.co.id/#bt_contact' target='blank'>
+                <Button className='rounded-xl'>Contact Us</Button>
+              </a>
+            </div>
+          </CardContent>
+        </Card>
       </div>
       <div className="bg-stone-50 dark:bg-black">
         <div className="container">

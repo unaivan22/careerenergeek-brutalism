@@ -22,6 +22,15 @@ import {
 } from "@/components/ui/card"
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 const images = import.meta.glob('/public/clients/*.webp', { eager: true });
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 const Home = () => {
   const [lokers, setLokers] = useState([]);
@@ -64,123 +73,285 @@ const Home = () => {
         <img className='hidden md:block mt-24' src='/bgteam.webp' />
         ) : ( */}
         <div className='flex flex-col gap-4 bg-orange-400'>
-          <div className='hidden md:grid grid-cols-9 gap-3 mt-[120px] px-4'>
+          <div className='hidden lg:grid grid-cols-9 gap-3 mt-[120px] px-4'>
           <div className='flex flex-col gap-4 mt-16'>
-                { data.leftMember.slice(0,3).map((leftMemberitem, i) => {
-                  return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
-                  );
-                })
+            { data.leftMember.slice(0,3).map((leftMemberitem, i) => {
+                return (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                          <img
+                            src={leftMemberitem.img}
+                            className='h-auto w-auto object-cover translate-y-[6px]'
+                          />
+                      </Card>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                      <div className="grid">
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                            />
+                            <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                              <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                              <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                            </div>
+                        </Card>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                );
+              })
             }
             </div>
             <div className='flex flex-col gap-4'>
-                { data.leftMember.slice(3,6).map((leftMemberitem, i) => {
+              { data.leftMember.slice(3,6).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
             <div className='flex flex-col gap-4 mt-20'>
-                { data.leftMember.slice(6,8).map((leftMemberitem, i) => {
+              { data.leftMember.slice(6,8).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
             <div className='flex flex-col gap-4'>
-                { data.leftMember.slice(8,10).map((leftMemberitem, i) => {
+              { data.leftMember.slice(8,10).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
             <div className='flex flex-col gap-4 mt-8'>
-                { data.leftMember.slice(10,12).map((leftMemberitem, i) => {
+              { data.leftMember.slice(10,12).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
             <div className='flex flex-col gap-4'>
-                { data.leftMember.slice(12,14).map((leftMemberitem, i) => {
+              { data.leftMember.slice(12,14).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
             <div className='flex flex-col gap-4 mt-20'>
-                { data.leftMember.slice(14,16).map((leftMemberitem, i) => {
+              { data.leftMember.slice(14,16).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
             <div className='flex flex-col gap-4'>
-                { data.leftMember.slice(16,19).map((leftMemberitem, i) => {
+              { data.leftMember.slice(16,19).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
             <div className='flex flex-col gap-4 mt-16'>
-                { data.leftMember.slice(19,22).map((leftMemberitem, i) => {
+              { data.leftMember.slice(19,22).map((leftMemberitem, i) => {
                   return (
-                    <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 px-1 lg:px-3 ${leftMemberitem.bg}`}>
-                        <img
-                          src={leftMemberitem.img}
-                          className='h-[160px] w-full object-cover'
-                        />
-                    </Card>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-auto w-auto object-cover translate-y-[6px]'
+                            />
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                        <div className="grid">
+                          <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                              <img
+                                src={leftMemberitem.img}
+                                className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                              />
+                              <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                                <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                                <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                              </div>
+                          </Card>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   );
                 })
-            }
+              }
             </div>
           </div>
           <div className='flex items-center justify-center my-8 -translate-y-[150px]'>
@@ -191,32 +362,68 @@ const Home = () => {
       </div>
         
       {/* <img className='md:hidden mt-0 md:mt-24' src='/bgteam.webp' /> */}
-      <div className='md:hidden mt-8 md:mt-24 space-y-6'>
+      <div className='lg:hidden mt-8 md:mt-24 space-y-6'>
         <InfiniteSlider gap={24}>
-            { data.leftMember.slice(1,11).map((leftMemberitem, i) => {
-              return (
-                <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
-                    <img
-                      src={leftMemberitem.img}
-                      className='h-[160px] w-full object-cover'
-                    />
-                </Card>
-              );
-            })
-        }
+          { data.leftMember.slice(0,11).map((leftMemberitem, i) => {
+                return (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                          <img
+                            src={leftMemberitem.img}
+                            className='h-[160px] w-auto object-cover translate-y-[6px]'
+                          />
+                      </Card>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                      <div className="grid">
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                            />
+                            <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                              <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                              <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                            </div>
+                        </Card>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                );
+              })
+            }
         </InfiniteSlider>
         <InfiniteSlider gap={24} reverse>
-            { data.leftMember.slice(12,21).map((leftMemberitem, i) => {
-              return (
-                <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-6 ${leftMemberitem.bg}`}>
-                    <img
-                      src={leftMemberitem.img}
-                      className='h-[160px] w-full object-cover'
-                    />
-                </Card>
-              );
-            })
-        }
+          { data.leftMember.slice(12,22).map((leftMemberitem, i) => {
+                return (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 px-1 lg:px-3 cursor-pointer ${leftMemberitem.bg}`}>
+                          <img
+                            src={leftMemberitem.img}
+                            className='h-[160px] w-auto object-cover translate-y-[6px]'
+                          />
+                      </Card>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[325px] bg-transparent border-0">
+                      <div className="grid">
+                        <Card key={leftMemberitem.id} className={`w-full flex flex-col items-center justify-center relative pt-2 ${leftMemberitem.bg} rounded-t-full`}>
+                            <img
+                              src={leftMemberitem.img}
+                              className='h-[360px] w-auto object-cover translate-y-[6px] mb-2'
+                            />
+                            <div className='bg-white w-full p-4 flex flex-col gap-2'>
+                              <p className='font-semibold text-xl'>{leftMemberitem.name}</p>
+                              <p className='text-sm font-light'>{leftMemberitem.position}</p>
+                            </div>
+                        </Card>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                );
+              })
+            }
         </InfiniteSlider>
         <div className='flex items-center justify-center'>
         <a href='/#/teams'>
@@ -224,7 +431,7 @@ const Home = () => {
         </a>
         </div>
       </div>
-      <div className='container mb-32 -translate-y-[100px] lg:-translate-y-[180px] bg-green-500 mt-32 pt-12 pb-24 px-6 lg:px-12 rounded-xl'>
+      <div className='container mb-32 -translate-y-[100px] lg:-translate-y-[180px] bg-green-500 mt-32 pt-12 pb-24 px-6 lg:px-12 border-2 border-black'>
         <div className='flex flex-col mt-12 md:mt-24 md:mb-32 mb-16'>
           {/* <img src='/bgteam.webp' /> */}
           <div></div>
@@ -306,15 +513,20 @@ const Home = () => {
       </div>
 
       <div className='container'>
-        <div className='md:mx-[12vw] mb-12'>
-          <div className='flex flex-col items-center justify-center bg-black dark:bg-stone-900 py-12 md:py-24 w-full gap-4 rounded-2xl'>
-            <h1 className='text-white text-center text-xl md:text-4xl'>We Can't Wait To Join Out Teams</h1>
-            <p className='text-white text-xs md:text-xl font-light text-center'>Let's connect with you and hear your story. <br /> Let's work together to achieve amazing things!</p>
-            <a href='https://energeek.co.id/#bt_contact' target='blank'>
-              <Button className='rounded-xl'>Contact Us</Button>
-            </a>
-          </div>
-        </div>
+        <Card className="md:mx-[12vw] bg-[#A56DFE] p-4 lg:p-12">
+          <CardHeader>
+            <CardTitle className='text-center text-4xl'>We Can't Wait To Join Out Teams</CardTitle>
+            <CardDescription className='text-black text-center'>Let's connect with you and hear your story.
+            Let's work together to achieve amazing things!</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className='flex items-center justify-center'>
+              <a href='https://energeek.co.id/#bt_contact' target='blank'>
+                <Button className='rounded-xl'>Contact Us</Button>
+              </a>
+            </div>
+          </CardContent>
+        </Card>
       </div>
       <div className='bg-stone-50 dark:bg-black'>
         <div className='container'>
