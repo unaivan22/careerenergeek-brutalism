@@ -4,7 +4,7 @@ import { ArrowLeft, Loader } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const OnlyLogin = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -82,7 +82,7 @@ const Login = () => {
   }, [navigate]);
 
   return (
-    <div className='bg-yellow-500'>
+    <div className='bg-purple-500'>
       <div className="flex items-center justify-center h-screen ">
         <div className="bg-white dark:bg-stone-900 pt-12 px-8 pb-12 border-2 border-black shadow-lg w-80">
           <img src='/energeek-full.svg' className='h-6 mb-2' />
@@ -129,17 +129,17 @@ const Login = () => {
             {isLoadingStart && <Loader className="animate-spin mr-2 h-4 w-4" /> }
             {isSignUp ? 'Sign Up' : 'Login'}
           </Button>
-          <p
+          {/* <p
             onClick={() => setIsSignUp(!isSignUp)}
             className="underline text-center mt-4 cursor-pointer text-sm"
           >
             {isSignUp
               ? 'Already have an account? Log in'
               : "Don't have an account? Sign up"}
-          </p>
+          </p> */}
           <div className='w-full mt-12'>
             <a className='w-full' href='/'>
-              <Button className='w-full' variant='secondary'> <ArrowLeft className='w-4 h-4 mr-2' /> Back to Home</Button>
+              <Button className='w-full' variant='outline'> <ArrowLeft className='w-4 h-4 mr-2' /> Back to Home</Button>
             </a>
           </div>
         </div>
@@ -148,4 +148,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default OnlyLogin;

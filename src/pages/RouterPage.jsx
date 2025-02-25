@@ -8,6 +8,7 @@ import Loker from './loker/Loker';
 import Applicant from './Applicant';
 import NotFound from './NotFound';
 import AllTeams from './AllTeams';
+import OnlyLogin from './OnlyLogin';
 
 
 const RouterPage = () => {
@@ -23,6 +24,7 @@ const RouterPage = () => {
           element={isAuthenticated ? <Admin /> : <Navigate to="/IUgM0pcSTnifR7AU" />} 
         />
         <Route path="/IUgM0pcSTnifR7AU" element={<Login />} />
+        <Route path="/admin" element={<OnlyLogin />} />
         <Route 
           path="/loker-rJWbRV" 
           element={isAuthenticated ? <Loker /> : <Navigate to="/IUgM0pcSTnifR7AU" />} 
