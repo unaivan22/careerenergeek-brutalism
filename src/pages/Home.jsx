@@ -89,7 +89,7 @@ const Home = () => {
   // Fetch loker list from backend
   const fetchLoker = async () => {
     try {
-      const response = await axios.get('/api/home.php');
+      const response = await axios.get('https://careers.energeek.id//api/home.php');
       // Filter out expired lokers based on the deadline
       const currentDate = new Date();
       const filteredLokers = response.data.filter((loker) => {
