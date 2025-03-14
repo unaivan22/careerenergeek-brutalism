@@ -112,7 +112,7 @@ const Applicant = () => {
             </div>
           </div>
           ) : (
-          <Table className='border shadow mb-24'>
+          <Table className='border shadow-sm mb-24'>
             <TableHeader>
               <TableRow>
                 <TableHead>Name</TableHead>

@@ -89,7 +89,7 @@ const Home = () => {
   // Fetch loker list from backend
   const fetchLoker = async () => {
     try {
-      const response = await axios.get('https://careers.energeek.id//api/home.php');
+      const response = await axios.get('/api/home.php');
       // Filter out expired lokers based on the deadline
       const currentDate = new Date();
       const filteredLokers = response.data.filter((loker) => {
@@ -114,7 +114,7 @@ const Home = () => {
   return (
     <div id='home' className='bg-yellow-300 pb-12 md:pb-0'>
       <motion.div
-        className="absolute lg:top-[52vh] top-[32vh] lg:left-[24vw] left-[16vw] z-[9]"
+        className="absolute lg:top-[52vh] top-[32vh] lg:left-[24vw] left-[16vw] z-9"
         animate={{
           x: innovationTranslation.x,
           y: innovationTranslation.y,
@@ -134,7 +134,7 @@ const Home = () => {
       </motion.div>
 
       <motion.div
-        className="absolute lg:top-[52vh] top-[42vh] lg:right-[26vw] right-[16vw] z-[9]"
+        className="absolute lg:top-[52vh] top-[42vh] lg:right-[26vw] right-[16vw] z-9"
         animate={{
           x: teamworkTranslation.x,
           y: teamworkTranslation.y,
@@ -154,7 +154,7 @@ const Home = () => {
       </motion.div>
 
       <motion.div
-        className="absolute lg:top-[72vh] top-[56vh] lg:left-[46vw] left-[32vw] z-[9]"
+        className="absolute lg:top-[72vh] top-[56vh] lg:left-[46vw] left-[32vw] z-9"
         animate={{
           x: professionalTranslation.x,
           y: professionalTranslation.y,
@@ -638,7 +638,7 @@ const Home = () => {
           <Footer />
         </div>
       </div>
-      {/* <div className='fixed bottom-8 right-8 z-[999]'>
+      {/* <div className='fixed bottom-8 right-8 z-999'>
         <ModeToggle />
       </div> */}
     </div>

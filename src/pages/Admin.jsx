@@ -264,7 +264,7 @@ const Admin = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <Table className='border shadow'>
+        <Table className='border shadow-sm'>
         {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
         <TableHeader>
           <TableRow>

@@ -204,7 +204,7 @@ const JobDetail = () => {
         <title>{job.namaposisi} - Careers at Energeek</title>
       </Helmet>
       <NavbarPublic />
-      <div className='container md:px-[12vw] mb-32 pt-[120px] pb-12'>
+      <div className='container md:px-[12vw] md:mb-32 pt-[120px] md:pb-12 pb-32'>
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -284,13 +284,24 @@ const JobDetail = () => {
                             />
                           </div>
                           <div className='flex flex-col gap-1'>
+                            <p className='text-sm font-base'>Resume/CV <span className='text-red-500 text-xs'>*Required</span></p>
+                            <Input
+                              type='file'
+                              name='attachment'
+                              onChange={handleFileChange}
+                              accept="application/pdf"
+                              className='w-full'
+                              required
+                            />
+                          </div>
+                          <div className='flex flex-col gap-1'>
                             <p className='text-sm font-base'>Desired Salary <span className='text-stone-500 text-xs'>in Rupiah</span></p>
                             <Input
                               type='text'
                               name='desiredsalary'
                               value={applicationData.desiredsalary}
                               onChange={handleApplicationChange}
-                              placeholder='0'
+                              placeholder='0 (optional)'
                               className='w-full'
                               // required
                             />
@@ -306,17 +317,6 @@ const JobDetail = () => {
                               className='w-full'
                             />
                           </div>
-                          <div className='flex flex-col gap-1'>
-                            <p className='text-sm font-base'>Resume/CV <span className='text-red-500 text-xs'>*Required</span></p>
-                            <Input
-                              type='file'
-                              name='attachment'
-                              onChange={handleFileChange}
-                              accept="application/pdf"
-                              className='w-full'
-                              required
-                            />
-                          </div>
                           <div className='flex flex-col gap-1  mb-8'>
                             <p className='text-sm font-base'>Short Experience</p>
                             <Textarea
@@ -324,7 +324,7 @@ const JobDetail = () => {
                               name='shortresume'
                               value={applicationData.shortresume}
                               onChange={handleApplicationChange}
-                              placeholder='Max 200 characters'
+                              placeholder='Max 200 characters (optional)'
                               className='w-full'
                               // maxLength={200}
                             />
@@ -349,11 +349,11 @@ const JobDetail = () => {
           <div className='w-full flex flex-col gap-10 items-center justify-center mt-12'>
             <div ><Button className='rounded-full' onClick={htmlToImageConvert}> <Share className='w-4 h-4 mr-2' /> Export</Button></div>
               <div className="bg-white dark:bg-black w-[600px] p-8 border relative overflow-hidden" ref={elementRef} id='share'>
-                <div className="grid gap-4 py-4 z-[999]">
+                <div className="grid gap-4 py-4 z-999">
                   <div className='flex flex-col' >
                     <div className='flex justify-between items-end'>
                       <img src='/e.svg' className='w-20 mb-6' />
-                      <div className='flex gap-1 flex-col mb-12 z-[999]'>
+                      <div className='flex gap-1 flex-col mb-12 z-999'>
                         <p className='text-xs font-light opacity-60'>Apply ke alamat dibawah ini</p>
                         <Badge className='w-fit text-[.7rem]'>{currentURL}</Badge>
                       </div>
@@ -393,11 +393,11 @@ const JobDetail = () => {
                     <p className="text-red-600 font-medium">This job posting has expired and applications are no longer accepted.</p>
                   </div>
                 <div className="bg-white dark:bg-black w-[600px] p-8 border relative overflow-hidden grayscale opacity-40">
-                  <div className="grid gap-4 py-4 z-[999]">
+                  <div className="grid gap-4 py-4 z-999">
                     <div className='flex flex-col opacity-80' >
                       <div className='flex justify-between items-end'>
                         <img src='/e.svg' className='w-20 mb-6' />
-                        <div className='flex gap-1 flex-col mb-12 z-[999]'>
+                        <div className='flex gap-1 flex-col mb-12 z-999'>
                           <p className='text-xs font-light opacity-60'>Apply ke alamat dibawah ini</p>
                           <Badge className='w-fit text-[.7rem]'>{currentURL}</Badge>
                         </div>
@@ -444,7 +444,7 @@ const JobDetail = () => {
             <h1 className='text-3xl font-semibold mb-2'>Success</h1>
             <p className='font-light opacity-60 text-sm max-w-xs text-center'>Lamaran anda berhasil dikirim, tim kami akan mengontak anda.</p>
 
-            <a href='/'><Button className='rounded-full shadow mt-5'>Selesai</Button></a>
+            <a href='/'><Button className='rounded-full shadow-sm mt-5'>Selesai</Button></a>
           </div>
         </div>
       )}

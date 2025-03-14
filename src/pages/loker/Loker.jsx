@@ -196,7 +196,7 @@ const Loker = () => {
       )}
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[999]">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-999">
           <div className="bg-white dark:bg-stone-800 p-6 rounded border-2 border-black shadow-md w-[500px]">
             <h3 className="text-lg font-bold mb-4">Edit Loker</h3>
             <form onSubmit={handleSubmit} className='h-[600px]'>
