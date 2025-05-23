@@ -25,12 +25,6 @@
             "img" : "/members/jokosusilo.webp",
             "bg" : "bg-sky-500"
         },{   
-            "id" : "04",
-            "name" : "Dinivan Nendra",
-            "position" : "Sr. UI/UX Designer",
-            "img" : "/members/dinivannendra.webp",
-            "bg" : "bg-rose-500"
-        },{   
             "id" : "05",
             "name" : "Wisnu Praditya",
             "position" : "Senior Support & QC",
@@ -131,6 +125,12 @@
             "name" : "Fatchur Rosi",
             "position" : "Staff Fullstack",
             "img" : "/members/fatchurrosi.webp",
+            "bg" : "bg-rose-500"
+        },{   
+            "id" : "22",
+            "name" : "Nur Filza Mufida",
+            "position" : "Staff UI/UX Designer",
+            "img" : "/members/nurfilzamufida.webp",
             "bg" : "bg-rose-500"
         }
     ],

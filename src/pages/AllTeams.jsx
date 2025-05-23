@@ -100,7 +100,7 @@ export default function AllTeams() {
     getRandomTranslation()
   );
 
-  const [ivanTranslation, setIvanTranslation] = useState(
+  const [filzaTranslation, setFilzaTranslation] = useState(
     getRandomTranslation()
   );
   const [drajatTranslation, setDrajatTranslation] = useState(
@@ -156,11 +156,11 @@ export default function AllTeams() {
   }, []);
 
   useEffect(() => {
-    const ivanInterval = setInterval(() => {
-      setIvanTranslation(getRandomTranslation());
+    const filzaInterval = setInterval(() => {
+      setFilzaTranslation(getRandomTranslation());
     }, 2000); // Set a different interval for sella
 
-    return () => clearInterval(ivanInterval);
+    return () => clearInterval(filzaInterval);
   }, []);
 
   useEffect(() => {
@@ -498,9 +498,9 @@ export default function AllTeams() {
           <motion.div
             className="absolute top-[65vh] right-[26vw]"
             animate={{
-              x: ivanTranslation.x,
-              y: ivanTranslation.y,
-              z: ivanTranslation.z,
+              x: filzaTranslation.x,
+              y: filzaTranslation.y,
+              z: filzaTranslation.z,
             }}
             transition={{
               type: "spring",
@@ -510,7 +510,7 @@ export default function AllTeams() {
             <div className="hidden lg:flex gap-x-1">
               <BsCursorFill className="scale-x-[-1] h-4 w-4 text-lime-500" />
               <div className="mt-4 -ml-2 py-1 px-2 bg-lime-500 rounded-md flex items-center gap-x-2 w-fit">
-                <p className="text-white text-[.6rem] capitalize">ivan</p>
+                <p className="text-white text-[.6rem] capitalize">filza</p>
               </div>
             </div>
           </motion.div>
